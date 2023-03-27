@@ -1,0 +1,78 @@
+{% extends "base.html"%}
+
+{% block head %}
+<h1>welcome to mass mail validator and mailer</h1>
+<style>
+    .container {
+      height: 200px;
+      position: relative;
+      border: 3px solid green;
+    }
+    
+    .vertical-center {
+      margin: 0;
+      position: absolute;
+      top: 50%;
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%);
+    }
+    </style>
+<div class="container">
+    <div class="vertical-center">
+        <div class="space">           
+        </div>
+        <div class="flex-parent jc-center">
+       <input type="file" class="block" name="upload a csv file" id="csv"> 
+        </div>
+       <div class="space">       
+       </div> 
+       <div class="flex-parent jc-center">           
+       <button id=" validated" class="block"> validate <a href="{{ url_for('validated') }}">validate</a></button>
+       </div>
+       <div class="space">
+       </div>
+       <div class="flex-parent jc-center">
+       <button id="massmailer" class="block">mass mailer <a href="{{url_for('massmailer') }}">massmailer</a></button>
+       </div>
+</div>
+   </div>
+   <style>
+   .block {
+    display: block;
+    width: 100%;
+    border: none;
+    background-color: #04AA6D;
+    padding: 14px 28px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    
+  }
+  .space {
+  width: 4px;
+  height: auto;
+  display: inline-block;
+}
+.vertical-center{
+  text-align: center;
+}
+.flex-parent {
+  display: flex;
+}
+
+.jc-center {
+  justify-content: center;
+}
+head {
+  background-image: url('https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.pinterest.com%2Fpin%2F774478467146384143%2F&psig=AOvVaw3Pn75QUU9et1N2uBvgWQpe&ust=1664299734212000&source=images&cd=vfe&ved=0CAwQjRxqFwoTCLiJuuj9svoCFQAAAAAdAAAAABAD');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+  </style>
+
+{% endblock %}
+
+
+
